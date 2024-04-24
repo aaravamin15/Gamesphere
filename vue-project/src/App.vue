@@ -1,7 +1,6 @@
 <script>
 import Header from './components/Header.vue'
 import Sidebar from './components/Sidebar.vue'
-import Footer from './components/Footer.vue'
 import Home from './components/Pages/Home.vue'
 import Cart from './components/Pages/Cart.vue'
 import Action from './components/Pages/Action.vue'

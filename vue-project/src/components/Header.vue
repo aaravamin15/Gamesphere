@@ -1,7 +1,7 @@
 <template>
     <div id="topbar">
       <div id="logo-box">
-        <img src="logo.png" alt="Logo" id="logo">
+        <img src="./logo.png" alt="Logo" id="logo">
       </div>
       <div id="search-bar">
         <input type="text" placeholder="Search...">
