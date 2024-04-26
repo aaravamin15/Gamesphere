@@ -27,7 +27,7 @@
   
   <style scoped>
   #sidebar {
-    width: 87px;
+    width: 120px;
     background-color: #f4f4f4;
     padding: 20px;
     height: calc(100vh - 75px);

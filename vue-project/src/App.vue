@@ -38,6 +38,7 @@ export default {
 </script>
 
 <template>
+  <Sidebar />
   <Header />
   <component :is="currentPath" />
 </template>
