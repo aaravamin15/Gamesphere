@@ -7,6 +7,7 @@
         <input type="text" placeholder="Search...">
       </div>
       <div id="cart" @click="showCart">Cart</div>
+        <img src="../assets/Cart.png" alt="Logo" id="logo">
     </div>
   </template>
   
