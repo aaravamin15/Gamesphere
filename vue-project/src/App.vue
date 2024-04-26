@@ -32,8 +32,7 @@ export default {
   },
   components: {
     Header,
-    Sidebar,
-    Footer
+    Sidebar
   }
 }
 </script>
@@ -41,7 +40,6 @@ export default {
 <template>
   <Header />
   <component :is="currentPath" />
-  <Footer />
 </template>
 
 <style></style>
