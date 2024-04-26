@@ -11,7 +11,6 @@ import Strategy from './components/Pages/Strategy.vue'
 
 const routes = {
   '/': Home,
-  '/home': Home,
   '/cart': Cart,
   '/action': Action,
   '/adventure': Adventure,
@@ -22,14 +21,10 @@ const routes = {
 export default {
   data() {
     return {
-      currentPath: routes['/']
+      currentPath: null
     }
   },
-  mounted() {
-    window.addEventListener('hashchange', () => {
-      this.currentPath = routes[window.location.hash.slice(1)];
-    });
-  },
+  
   components: {
     Header,
     Sidebar
