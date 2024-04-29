@@ -14,7 +14,7 @@
     data() {
       return {
         genres: [
-          { name: "Action", link: "#" },
+          { name: "Action", link: "/#action" },
           { name: "Adventure", link: "#" },
           { name: "RPG", link: "#" },
           { name: "Strategy", link: "#" },

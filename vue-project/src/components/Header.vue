@@ -27,7 +27,7 @@ export default {
 
 <style scoped>
 #topbar {
-  background-color: #2c7a7b;
+  background-color: aqua;
   color: #fff;
   padding: 20px;
   position: fixed;
