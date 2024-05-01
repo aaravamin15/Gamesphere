@@ -14,12 +14,17 @@
     </div>
   </div>
 </template>
-
 <script>
 export default {
   methods: {
     showCart() {
-      alert('Clicked on cart');
+      // Programmatically navigate to Cart.vue
+      // Replace this with your preferred navigation method, such as changing a variable to control the view
+      console.log('Navigating to cart...');
+      // For example:
+      // this.$emit('navigate-to-cart');
+      // or
+      // this.$parent.$data.showCartView = true; // Assuming you control cart visibility through a parent component
     }
   }
 };
@@ -62,7 +67,6 @@ export default {
   width: 700px;
   align-items: center;
 }
-
 
 #search-bar input[type="text"] {
   border: none;

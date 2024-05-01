@@ -14,11 +14,11 @@
     data() {
       return {
         genres: [
-          { name: "Action", link: "/action" },
-          { name: "Adventure", link: "/adventure" },
-          { name: "RPG", link: "/rpg" },
-          { name: "Strategy", link: "/strategy" },
-          { name: "Simulation", link: "/simulation" }
+          { name: "Action", link: "/#/action" },
+          { name: "Adventure", link: "/#/adventure" },
+          { name: "RPG", link: "/#/rpg" },
+          { name: "Strategy", link: "/#/strategy" },
+          { name: "Simulation", link: "/#/simulation" }
         ]
       };
     }

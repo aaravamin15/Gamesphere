@@ -33,7 +33,11 @@ export default {
       this.showLandingScreen = false;
       this.currentPath = routes['/'];
     }, 3000); 
+    window.addEventListener('hashchange', () => {
+      this.currentPath = routes[window.location.hash.slice(1)];
+    });
   },
+
   components: {
     Header,
     Sidebar,
