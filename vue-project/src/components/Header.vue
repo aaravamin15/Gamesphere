@@ -83,6 +83,6 @@ export default {
 #carticon {
   width: 70px;
   height: auto;
-  margin-bottom: -20px; /* Add some space between icon and text */
+  margin-bottom: -20px; 
 }
 </style>

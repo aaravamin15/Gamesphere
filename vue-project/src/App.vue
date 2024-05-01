@@ -9,6 +9,7 @@ import RPG from './components/Pages/RPG.vue'
 import Simulation from './components/Pages/Simulation.vue'
 import Strategy from './components/Pages/Strategy.vue'
 import Load from './components/Pages/Load.vue'
+import Gamepage from './components/Pages/Gamepage.vue'
 
 const routes = {
   '/': Home,
@@ -18,6 +19,7 @@ const routes = {
   '/rpg': RPG,
   '/simulation': Simulation,
   '/strategy': Strategy,
+  '/playgame': Gamepage,
 }
 export default {
   data() {
