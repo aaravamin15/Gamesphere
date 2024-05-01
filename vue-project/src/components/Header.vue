@@ -27,7 +27,7 @@ export default {
 
 <style scoped>
 #topbar {
-  background-color: #2c7a7b;
+  background-color: aqua;
   color: #fff;
   padding: 20px;
   position: fixed;
@@ -83,6 +83,6 @@ export default {
 #carticon {
   width: 70px;
   height: auto;
-  margin-bottom: -20px; /* Add some space between icon and text */
+  margin-bottom: -20px; 
 }
 </style>

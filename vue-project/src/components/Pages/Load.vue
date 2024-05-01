@@ -1,9 +1,7 @@
 <template>
+    <div class="background-container"></div>
     <div class="landing-screen">
-      <div class="centered-content">
-    
-        <img src="../../assets/logo.png" alt="Logo" class="centered-logo" :style="{ animation: animationDirection }">
-      </div>
+      <img src="../../assets/logo.png" alt="Logo" class="centered-logo">
     </div>
   </template>
   
@@ -12,45 +10,49 @@
     name: 'LandingScreen',
     data() {
       return {
-        animationDirection: 'spin 2s infinite', 
+        isSpinningClockwise: true, // Boolean to track animation direction
       };
+    },
+    mounted() {
+      // Automatically start the animation when the component is mounted
+      setInterval(this.toggleAnimationDirection, 2000); // Change direction every 2 seconds
     },
     methods: {
       toggleAnimationDirection() {
-        this.animationDirection = this.animationDirection === 'spin 2s infinite' ? 'spin-reverse 2s infinite' : 'spin 2s infinite';
+        this.isSpinningClockwise = !this.isSpinningClockwise; // Toggle direction
       },
     },
   };
   </script>
   
   <style scoped>
+  .background-container {
+  background-color: aqua; /* Set background color of entire screen */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+
   .landing-screen {
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #f0f0f0; 
-  }
-  
-  .centered-content {
-    text-align: center;
+    position: absolute;
+    left: 43%;
+    top: 35%;
+    background-color: aqua;
   }
   
   .centered-logo {
-    width: 100px; 
-    height: auto;
+    transform: scale(4);
+    width: 200px; 
+    height: 200px; /* Make the logo square */
+    animation: spin 2s infinite; /* Add animation here directly */
   }
   
   @keyframes spin {
     0% { transform: rotate(0deg); }
-    50% { transform: rotate(720deg); }
-    100% { transform: rotate(1440deg); }
-  }
-  
-  @keyframes spin-reverse {
-    0% { transform: rotate(1440deg); }
-    50% { transform: rotate(720deg); }
-    100% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
   }
   </style>
   
