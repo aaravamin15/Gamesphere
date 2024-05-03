@@ -18,13 +18,8 @@
 export default {
   methods: {
     showCart() {
-      // Programmatically navigate to Cart.vue
-      // Replace this with your preferred navigation method, such as changing a variable to control the view
-      console.log('Navigating to cart...');
-      // For example:
-      // this.$emit('navigate-to-cart');
-      // or
-      // this.$parent.$data.showCartView = true; // Assuming you control cart visibility through a parent component
+      const cartLink = "/#/cart";
+      window.location.href = cartLink;
     }
   }
 };
