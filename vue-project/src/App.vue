@@ -11,6 +11,7 @@ import Strategy from './components/Pages/Strategy.vue'
 import Load from './components/Pages/Load.vue'
 import Gamepage from './components/Pages/Gamepage.vue'
 
+
 const routes = {
   '/': Home,
   '/cart': Cart,
@@ -59,4 +60,4 @@ export default {
   </div>
 </template>
 
-<style></style>
+

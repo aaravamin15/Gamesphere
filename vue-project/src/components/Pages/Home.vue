@@ -5,7 +5,7 @@
       <Sidebar />
       <div class="main-content" style="transform: translateX(50px);">
         <!-- Main Featured Box -->
-        <div class="featured-box" @click="handleBoxClick('Game 1')">
+        <div class="featured-box">
           <h2>Featured Game</h2>
           <p>Description of the featured game.</p>
         </div>
@@ -13,25 +13,33 @@
         <!-- Grid of Small Boxes -->
         <div class="grid-container">
           <!-- Box 1 -->
-          <div class="grid-item" @click="handleBoxClick('Game 2')">
-            <h2>Game 1</h2>
-            <p>Description of game 1.</p>
-          </div>
+          <button class="grid-item" @click="navigateToGame(1)">
+            <div>
+              <h2>Game 1</h2>
+              <p>Description of game 1.</p>
+            </div>
+          </button>
           <!-- Box 2 -->
-          <div class="grid-item" @click="handleBoxClick('Game 3')">
-            <h2>Game 2</h2>
-            <p>Description of game 2.</p>
-          </div>
+          <button class="grid-item" @click="navigateToGame(2)">
+            <div>
+              <h2>Game 2</h2>
+              <p>Description of game 2.</p>
+            </div>
+          </button>
           <!-- Box 3 -->
-          <div class="grid-item" @click="handleBoxClick('Game 4')">
-            <h2>Game 3</h2>
-            <p>Description of game 3.</p>
-          </div>
+          <button class="grid-item" @click="navigateToGame(3)">
+            <div>
+              <h2>Game 3</h2>
+              <p>Description of game 3.</p>
+            </div>
+          </button>
           <!-- Box 4 -->
-          <div class="grid-item" @click="handleBoxClick('Game 5')">
-            <h2>Game 4</h2>
-            <p>Description of game 4.</p>
-          </div>
+          <button class="grid-item" @click="navigateToGame(4)">
+            <div>
+              <h2>Game 4</h2>
+              <p>Description of game 4.</p>
+            </div>
+          </button>
         </div>
 
       </div>
@@ -50,9 +58,9 @@ export default {
     Sidebar
   },
   methods: {
-    handleBoxClick(game) {
-      // Emit an event with the game name
-      this.$emit('game-clicked', game);
+    navigateToGame(gameId) {
+      // Use Vue Router to navigate to the game page with the specified ID
+      this.$router.push({ name: 'game', params: { id: gameId } });
     }
   }
 };
@@ -99,6 +107,22 @@ p {
   background-color: #f0f0f0;
   border-radius: 10px;
   padding: 15px;
-  cursor: pointer; /* Change cursor to pointer on hover */
+  cursor: pointer; /* Change cursor to pointer to indicate clickable */
+  border: none; /* Remove default button styling */
+  outline: none; /* Remove default button outline */
+  text-align: left; /* Align text to left within button */
+}
+
+.grid-item:hover {
+  background-color: #e0e0e0; /* Change background color on hover */
+}
+
+.grid-item div {
+  display: flex;
+  flex-direction: column;
+}
+
+.grid-item h2 {
+  margin: 0 0 10px; /* Add margin below heading */
 }
 </style>
