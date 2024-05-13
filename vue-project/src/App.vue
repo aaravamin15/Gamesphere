@@ -55,7 +55,7 @@ export default {
     <div v-else>
       <Sidebar />
       <Header />
-      <RouterView />
+      <component :is="currentPath" /> 
     </div>
   </div>
 </template>
