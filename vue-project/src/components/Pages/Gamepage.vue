@@ -1,17 +1,17 @@
 <template>
-    <div>
-      <p>Hi</p>
-    </div>
-  </template>
-  
-  <script>
-  export default {
-    name: 'HiPage',
-  };
-  </script>
-  
-  <style scoped>
-  /* Add your styles here if needed */
-  </style>
-  
-  
+  <div class="game-container">
+    <iframe width="1340px" height="640px" src="https://www.addictinggames.com/embed/html5-games/10000516" scrolling="no" style="border:none"></iframe>
+  </div>
+</template>
+
+<script>
+export default {
+  name: 'HiPage',
+};
+</script>
+
+<style scoped>
+.game-container {
+  margin-top: 80px;
+}
+</style>
