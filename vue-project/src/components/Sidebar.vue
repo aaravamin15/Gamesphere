@@ -1,13 +1,13 @@
 <template>
-    <div id="sidebar">
-      <h2 style="color: #333;">Genres</h2>
-      <ul>
-        <li v-for="(genre, index) in genres" :key="index">
-          <a :href="genre.link" style="color: #555;">{{ genre.name }}</a>
-        </li>
-      </ul>
-    </div>
-  </template>
+  <div id="sidebar">
+    <h2 style="color: #333;">Genres</h2>
+    <ul>
+      <li v-for="(genre, index) in genres" :key="index">
+        <RouterLink :to="genre.link" style="color: #555;">{{ genre.name }}</RouterLink>
+      </li>
+    </ul>
+  </div>
+</template>
   
   <script>
   export default {
