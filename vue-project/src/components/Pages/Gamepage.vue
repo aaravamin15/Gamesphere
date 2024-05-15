@@ -1,6 +1,7 @@
 <template>
   <div class="game-container">
-    <iframe width="800px" height="640px" src="https://www.addictinggames.com/embed/html5-games/10000516" scrolling="no" style="border:none"></iframe>
+    <iframe width="1000px" height="600px" src="https://www.addictinggames.com/embed/html5-games/10000492" scrolling="no" style="border:none"></iframe>
+
   </div>
 </template>
 
@@ -13,5 +14,6 @@ export default {
 <style scoped>
 .game-container {
   margin-top: 80px;
+  margin-left: 166px;
 }
 </style>
