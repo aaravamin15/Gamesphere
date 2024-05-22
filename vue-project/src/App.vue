@@ -49,13 +49,16 @@ export default {
 
 <template>
   <div>
+    
     <div v-if="showLandingScreen">
       <Load /> 
     </div>
     <div v-else>
+      <RouterView>
+      </RouterView>
       <Sidebar />
       <Header />
-      <component :is="currentPath" /> 
+      <!-- <component :is="currentPath" />  -->
     </div>
   </div>
 </template>

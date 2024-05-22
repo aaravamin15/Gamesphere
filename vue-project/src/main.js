@@ -19,7 +19,7 @@ const router = createRouter({
     component: Home
 },
 {
-    path: '/gamepage',
+    path: '/gamepage/:number',
     name: 'Gamepage',
     component: Gamepage
 }

@@ -5,10 +5,10 @@
       <Sidebar />
       <div class="main-content" style="transform: translateX(50px);">
         <!-- Main Featured Box -->
-        <div class="featured-box">
+        <button class="featured-box">
           <h2>Featured Game</h2>
           <p>Description of the featured game.</p>
-        </div>
+        </button>
 
         <!-- Grid of Small Boxes -->
         <div class="grid-container">
@@ -48,19 +48,12 @@
 </template>
 
 <script>
-import Header from '../Header.vue' 
-import Sidebar from '../Sidebar.vue' 
 
 export default {
-  name: 'Home',
-  components: {
-    Header,
-    Sidebar
-  },
   methods: {
-    navigateToGame(gameId) {
-      // Use Vue Router to navigate to the game page with the specified ID
-      this.$router.push({ name: 'game', params: { id: gameId } });
+    navigateToGame(number) {
+      console.log("going to " + number) 
+      this.$router.push({ path: `/gamepage/${number}` });
     }
   }
 };
@@ -92,29 +85,33 @@ p {
   margin-bottom: 20px;
   height: 300px;
 }
+.featured-box:hover {
+  background-color: #e0e0e0; 
+}
 
-/* Grid Container Styles */
+
+
 .grid-container {
   display: flex;
-  flex-wrap: wrap; /* Allow items to wrap to the next row */
-  gap: 25px; /* Gap between items */
+  flex-wrap: wrap; 
+  gap: 25px; 
   height: 250px;
 }
 
-/* Grid Item Styles */
+
 .grid-item {
-  width: calc(25% - 20px); /* Each item takes up 25% of the container width minus the gap */
+  width: calc(25% - 20px); 
   background-color: #f0f0f0;
   border-radius: 10px;
   padding: 15px;
-  cursor: pointer; /* Change cursor to pointer to indicate clickable */
-  border: none; /* Remove default button styling */
-  outline: none; /* Remove default button outline */
-  text-align: left; /* Align text to left within button */
+  cursor: pointer; 
+  border: none; 
+  outline: none; 
+  text-align: left;
 }
 
 .grid-item:hover {
-  background-color: #e0e0e0; /* Change background color on hover */
+  background-color: #e0e0e0; 
 }
 
 .grid-item div {
@@ -123,6 +120,6 @@ p {
 }
 
 .grid-item h2 {
-  margin: 0 0 10px; /* Add margin below heading */
+  margin: 0 0 10px; 
 }
 </style>
