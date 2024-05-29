@@ -4,7 +4,7 @@
     <ul>
       <li v-for="(game, index) in games" :key="index">
         <template v-if="game.title === 'Daily Room Escape'">
-          <a href="/#/playgame">{{ game.title }}</a> - {{ game.genre }}
+          <RouterLink to="/#/playgame">{{ game.title }}</RouterLink> - {{ game.genre }}
         </template>
         <template v-else>
           {{ game.title }} - {{ game.genre }}

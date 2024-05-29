@@ -7,6 +7,8 @@ import Gamepage from './components/Pages/Gamepage.vue'
 
 
 
+
+
 import { createMemoryHistory, createRouter } from 'vue-router'
 
 const router = createRouter({

@@ -1,11 +1,9 @@
 <template>
   <div>
-    <Header />
     <div id="content">
-      <Sidebar />
       <div class="main-content" style="transform: translateX(50px);">
         <!-- Main Featured Box -->
-        <button class="featured-box">
+        <button class="featured-box" @click="navigateToGame(0)">
           <h2>Featured Game</h2>
           <p>Description of the featured game.</p>
         </button>

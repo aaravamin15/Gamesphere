@@ -1,9 +1,9 @@
 <template>
   <div id="topbar">
     <div id="logo-box">
-      <a href="/#/">
+      <RouterLink to ="/#/">
         <img src="../assets/logo.png" alt="Logo" id="logo">
-      </a>
+      </RouterLink>
     </div>
     <div id="search-bar">
       <input type="text" placeholder="Search...">
@@ -21,7 +21,7 @@ export default {
   methods: {
     showCart() {
       const cartLink = "/#/cart";
-      window.location.href = cartLink;
+      window.location.routerlink = cartLink;
     }
   }
 };
